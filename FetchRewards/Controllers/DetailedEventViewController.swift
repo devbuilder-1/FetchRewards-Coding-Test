@@ -48,7 +48,6 @@ class DetailedEventViewController : UIViewController {
     @IBAction func faveThis(_ sender: UIButton) {
         if !fav.contains(self.event.id!) {
         self.eventsViewModel.setFave(id: self.event.id!)
-            self.getFaves()
             print(self.fav)
             self.faveLabel.text = "You favourited this event"
             return

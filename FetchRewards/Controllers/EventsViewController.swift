@@ -107,8 +107,9 @@ class EventsViewController : UIViewController, UITableViewDataSource, UITableVie
     func fetchEventsForQuery(q:String)  {
         
         self.eventsViewModel.getEventsForQuery(query: q, completionHandler: { allevent in
+            
             ///a potential solution to remove duplicates
-          //  self.allevents = self.removeDuplicateEvents(events: allevent)
+          //self.allevents = self.removeDuplicateEvents(events: allevent)
             
             self.allevents = allevent
         })
@@ -250,7 +251,11 @@ class EventsViewController : UIViewController, UITableViewDataSource, UITableVie
         ///if the search bar has text to be searched for, search.
         else if searchBar.text != "" {
             
+            
+            ///get the text from the search bar, pass it on the the SeatGeek API.
             self.fetchEventsForQuery(q: searchBar.text!)
+            
+            
             
             ///we are filtering events by if the title or address has the serach bar text
 //            allevents = allevents.filter({$0.short_title!.lowercased().contains(searchBar.text!.lowercased()) || $0.venue!.display_location!.lowercased().contains(searchBar.text!.lowercased()) || $0.title!.lowercased().contains(searchBar.text!.lowercased())})

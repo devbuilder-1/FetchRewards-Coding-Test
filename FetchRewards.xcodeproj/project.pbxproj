@@ -13,6 +13,7 @@
 		1F23F7AC2683FE3A006C0E94 /* Favorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23F7AA2683FE3A006C0E94 /* Favorites+CoreDataClass.swift */; };
 		1F23F7AD2683FE3A006C0E94 /* Favorites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23F7AB2683FE3A006C0E94 /* Favorites+CoreDataProperties.swift */; };
 		1F23F7B22684035A006C0E94 /* DetailedEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23F7B12684035A006C0E94 /* DetailedEventViewModel.swift */; };
+		1F23F7B626851036006C0E94 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1F23F7B526850FED006C0E94 /* README.md */; };
 		1FAF1E5B2672CF41000E125B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF1E5A2672CF41000E125B /* AppDelegate.swift */; };
 		1FAF1E5D2672CF41000E125B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF1E5C2672CF41000E125B /* SceneDelegate.swift */; };
 		1FAF1E5F2672CF41000E125B /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF1E5E2672CF41000E125B /* EventsViewController.swift */; };
@@ -50,6 +51,7 @@
 		1F23F7AA2683FE3A006C0E94 /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1F23F7AB2683FE3A006C0E94 /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1F23F7B12684035A006C0E94 /* DetailedEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventViewModel.swift; sourceTree = "<group>"; };
+		1F23F7B526850FED006C0E94 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1FAF1E572672CF41000E125B /* FetchRewards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchRewards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAF1E5A2672CF41000E125B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FAF1E5C2672CF41000E125B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		1FAF1E4E2672CF41000E125B = {
 			isa = PBXGroup;
 			children = (
+				1F23F7B526850FED006C0E94 /* README.md */,
 				1FAF1E592672CF41000E125B /* FetchRewards */,
 				1FAF1E702672CF42000E125B /* FetchRewardsTests */,
 				1FAF1E7B2672CF42000E125B /* FetchRewardsUITests */,
@@ -301,6 +304,7 @@
 			files = (
 				1FAF1E672672CF42000E125B /* LaunchScreen.storyboard in Resources */,
 				1FAF1E642672CF42000E125B /* Assets.xcassets in Resources */,
+				1F23F7B626851036006C0E94 /* README.md in Resources */,
 				1FAF1E622672CF41000E125B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

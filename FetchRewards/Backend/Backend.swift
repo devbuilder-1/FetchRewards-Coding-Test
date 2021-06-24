@@ -51,7 +51,7 @@ class Backend {
     
     
     
-    
+    ///this function takes a query and makes a call with it
     func fetchEventWithQuery(query:String, completionHandler: @escaping ([Event]) -> Void)  {
         var urlWithQuery :URL {
             return URL(string: "https://api.seatgeek.com/2/events?q=\(query)&client_id=" + clientID) ?? url
@@ -99,7 +99,7 @@ class Backend {
     
     
     
-    
+    ///this function just gets all the events
     func fetchAllMainEvents(completionHandler: @escaping ([Event]) -> Void) {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
