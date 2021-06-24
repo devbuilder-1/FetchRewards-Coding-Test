@@ -20,8 +20,8 @@ class EventsViewModel: NSObject {
     func getEvents(completionHandler: @escaping ([Event]) -> Void) {
         DispatchQueue.global(qos: .background).async {
             self.backend.fetchAllMainEvents(completionHandler: { event in
-            completionHandler(event)
-        })
+                completionHandler(event)
+            })
         }
     }
     
@@ -30,12 +30,12 @@ class EventsViewModel: NSObject {
     ///get the events for this query
     func getEventsForQuery(query:String,completionHandler: @escaping ([Event]) -> Void)  {
         DispatchQueue.global(qos: .background).async {
-        self.backend.fetchEventWithQuery(query: query, completionHandler: { event in
-            completionHandler(event)
-        })}
+            self.backend.fetchEventWithQuery(query: query, completionHandler: { event in
+                completionHandler(event)
+            })}
     }
     
-
+    
     
     ///get all the faves from coredata
     func getAllFaves() -> [Double] {

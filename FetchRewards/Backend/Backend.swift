@@ -69,7 +69,7 @@ class Backend {
                 print("Error with the response, unexpected status code: \(String(describing: response))")
                 return
             }
-     
+            
             
             if let data = data,
                let _ = String(bytes: data, encoding: .utf8) {
@@ -89,7 +89,7 @@ class Backend {
             
         })
         task.resume()
-
+        
         
         
     }
@@ -114,7 +114,7 @@ class Backend {
                 print("Error with the response, unexpected status code: \(String(describing: response))")
                 return
             }
-     
+            
             
             if let data = data,
                let _ = String(bytes: data, encoding: .utf8) {

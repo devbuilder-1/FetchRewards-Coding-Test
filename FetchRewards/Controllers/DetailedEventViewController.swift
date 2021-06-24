@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 class DetailedEventViewController : UIViewController {
- 
+    
     
     
     /// this is the event passed from the main viewcontroller
     var event = Event(type: "", id: 2, datetimeUTC: nil, venue: nil, performers: nil, datetimeLocal: nil, short_title: nil, visibleUntilUTC: nil, url: nil, score: nil, announceDate: nil, createdAt: nil, title: nil, popularity: nil, eventDescription: nil, status: nil, enddatetimeUTC: nil)
     
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -24,7 +24,7 @@ class DetailedEventViewController : UIViewController {
     ///the image with a cool parallex effect
     @IBOutlet weak var eventImage: UIImageView!
     
-
+    
     ///title label
     @IBOutlet weak var titleLabel: UITextView!
     @IBOutlet weak var venueLabel: UITextView!
@@ -47,7 +47,7 @@ class DetailedEventViewController : UIViewController {
     ///this function setfaves and de-sets faves
     @IBAction func faveThis(_ sender: UIButton) {
         if !fav.contains(self.event.id!) {
-        self.eventsViewModel.setFave(id: self.event.id!)
+            self.eventsViewModel.setFave(id: self.event.id!)
             print(self.fav)
             self.faveLabel.text = "You favourited this event"
             return
@@ -55,8 +55,8 @@ class DetailedEventViewController : UIViewController {
         
         if fav.contains(self.event.id!) {
             self.eventsViewModel.desetFave(id: self.event.id!)
-           // self.getFaves()
-           // print(self.fav)
+            // self.getFaves()
+            // print(self.fav)
             self.faveLabel.text = ""
             return
         }
@@ -126,15 +126,15 @@ class DetailedEventViewController : UIViewController {
     // MARK: - Parallax
     func addParallaxToView(vw: UIView) {
         let amount = 30
-
+        
         let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
         horizontal.minimumRelativeValue = -amount
         horizontal.maximumRelativeValue = amount
-
+        
         let vertical = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
         vertical.minimumRelativeValue = -amount
         vertical.maximumRelativeValue = amount
-
+        
         let group = UIMotionEffectGroup()
         group.motionEffects = [horizontal, vertical]
         vw.addMotionEffect(group)

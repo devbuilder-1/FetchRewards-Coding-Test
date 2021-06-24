@@ -41,7 +41,7 @@ class DetailedEventViewModel : NSObject {
     ///un-fave an event
     func desetFave(id:Double) {
         do {
-        let favs = try context.fetch(Favorites.fetchRequest())
+            let favs = try context.fetch(Favorites.fetchRequest())
             for fav in favs{
                 if Double((fav as AnyObject).id) == id {
                     context.delete(fav as! Favorites)

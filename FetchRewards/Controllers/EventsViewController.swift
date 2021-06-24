@@ -55,7 +55,7 @@ class EventsViewController : UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // view.insetsLayoutMarginsFromSafeArea = false
+        // view.insetsLayoutMarginsFromSafeArea = false
         
         // Do any additional setup after loading the view.
         ///tableview stuff
@@ -89,19 +89,19 @@ class EventsViewController : UIViewController, UITableViewDataSource, UITableVie
     
     
     ///the query returns lots of duplicates, this function removes them
-//    func removeDuplicateEvents(events:[Event]) -> [Event]{
-//        var returnEvents = [Event]()
-//        var eventsID = events.map({$0.id})
-//
-//        for event in events {
-//            if !eventsID.contains(event.id){
-//                returnEvents.append(event)
-//                eventsID.append(event.id)
-//            }
-//        }
-//        return returnEvents
-//    }
-//
+    //    func removeDuplicateEvents(events:[Event]) -> [Event]{
+    //        var returnEvents = [Event]()
+    //        var eventsID = events.map({$0.id})
+    //
+    //        for event in events {
+    //            if !eventsID.contains(event.id){
+    //                returnEvents.append(event)
+    //                eventsID.append(event.id)
+    //            }
+    //        }
+    //        return returnEvents
+    //    }
+    //
     
     ///fetch events for query
     func fetchEventsForQuery(q:String)  {
@@ -109,7 +109,7 @@ class EventsViewController : UIViewController, UITableViewDataSource, UITableVie
         self.eventsViewModel.getEventsForQuery(query: q, completionHandler: { allevent in
             
             ///a potential solution to remove duplicates
-          //self.allevents = self.removeDuplicateEvents(events: allevent)
+            //self.allevents = self.removeDuplicateEvents(events: allevent)
             
             self.allevents = allevent
         })
@@ -171,8 +171,8 @@ class EventsViewController : UIViewController, UITableViewDataSource, UITableVie
         return self.allevents.count
     }
     
-     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         print(allevents[indexPath.row])
         self.performSegue(withIdentifier: "detailSegue", sender: self)
     }
@@ -258,10 +258,10 @@ class EventsViewController : UIViewController, UITableViewDataSource, UITableVie
             
             
             ///we are filtering events by if the title or address has the serach bar text
-//            allevents = allevents.filter({$0.short_title!.lowercased().contains(searchBar.text!.lowercased()) || $0.venue!.display_location!.lowercased().contains(searchBar.text!.lowercased()) || $0.title!.lowercased().contains(searchBar.text!.lowercased())})
+            //            allevents = allevents.filter({$0.short_title!.lowercased().contains(searchBar.text!.lowercased()) || $0.venue!.display_location!.lowercased().contains(searchBar.text!.lowercased()) || $0.title!.lowercased().contains(searchBar.text!.lowercased())})
             
         }
-
+        
     }
     
     
@@ -281,7 +281,7 @@ class EventsViewController : UIViewController, UITableViewDataSource, UITableVie
             }
         }
     }
-
+    
     
 }
 

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class EventTableViewCell : UITableViewCell {
-  
+    
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var eventLocation: UILabel!
@@ -17,7 +17,7 @@ class EventTableViewCell : UITableViewCell {
     @IBOutlet weak var eventTextBlurView: UIVisualEffectView!
     @IBOutlet weak var faveImage: UIImageView!
     
-  
-
+    
+    
     
 }
